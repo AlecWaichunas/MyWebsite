@@ -1,18 +1,36 @@
+var filePath = "res/pages/";
+var startPage = filePath + "about.html";
 var tabs = [
+            [$("#profile_pic"), "about.html"],
             [$("#about_tab"), "about.html"],
-            [$("#projects_tab"), "contact.html"],
+            [$("#projects_tab"), "projects.html"],
             [$("#contact_tab"), "contact.html"],
-            [$("#resume_tab"), "contact.html"]
+            [$("#resume_tab"), "resume.html"]
         ];
-$(document).ready(function(){
-    $("#content").load("about.html", function(){
-            alert("Loaded");
-    });
-});
+var tabSelected = 0;//keep track of which tab is selected
 
+var $content = $("#content");
+//load first page
+$content.load(startPage);
+
+//get all the tabs a click
 for(var i = 0; i < tabs.length; i++){
-    tabs[i][0].click(function(){
-        $("#content").empty();
-        $("#content").load("../pages/" + (tabs[i][1]));
-    });
+    //function for variable scope within click event
+    (function(tab, link, startPos){
+        tab.on("click", function(){
+            var minWidth = $("#content").css("min-width")
+            $("#content").css({ "min-width": $("#content").width()})
+            $("#content").animate({
+                left: $(document).width(),
+            }, 500, function(){
+                $("#content").empty();
+                $("#content").load(link);
+                $("#content").animate({
+                    left: startPos
+                }, 500, function(){
+                    $("#content").css({ "min-width": minWidth})
+                });
+            });
+        });
+    })(tabs[i][0], filePath + tabs[i][1], $content.position().left);
 }
