@@ -1,0 +1,59 @@
+body {
+    background-color: white;
+    margin: 0px;
+
+}
+
+.nav_holder{
+    height: 100px;
+    width: 100%;
+    background-color: rgb(90, 90, 90);
+}
+
+.nav_bar{
+    width: 80%;
+    min-width: 600px;
+    max-width: 1200px;
+    background-color: inherit;
+    margin: auto;
+}
+
+.nav_table{
+    text-align: left;
+    font-size: 200%
+}
+.nav_table tr {
+    height: 100%;
+}
+
+.nav_table p{
+    padding-right: 100px;
+    vertical-align: text-bottom;
+}
+
+.content {
+    background-color: rgb(200, 200, 200);
+    margin: auto;
+    box-shadow: 10px 5px 8px rgb(100, 100, 100);
+    width: 80%;
+    min-width: 600px;
+    max-width: 1200px;
+    padding-bottom: 1%;
+}
+
+.name_header{
+    text-align: center;
+    font-size: 300%;
+    color: blue;
+    margin: 0px;
+}
+
+.contact_info {
+    margin: auto;
+}
+
+.welcoming{
+    margin-left: 5%;
+    margin-right: 5%
+
+}
