@@ -10,6 +10,7 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
+    overflow-y: hidden;
 }
 /*NAVIGATION BAR START AKA ALGORITHM ;) */
 
@@ -49,14 +50,16 @@ td{
 }
 
 .tab {
-    border-right: 0px solid black;
-    border-radius: 2px;
-    -webkit-transition: border 50ms;
-    transition: border-right 50ms linear;
+    transition-property: transform, text-shadow, letter-spacing, box-shadow;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
 }
 
 .tab:hover {
-    border-right-width: 3px;
+    box-shadow: 1px 2px rgb(120, 120, 120);
+    transform: rotate(5deg);
+    letter-spacing: 3px;
+    text-shadow: 20px -10px rgb(120, 120, 120);
 }
 
 .nav_bar_option_image{
@@ -71,6 +74,11 @@ td{
     height: 200px;
     padding-left: 25px;
     padding-top: 25px;
+    transition: transform 1000ms ease-in;
+}
+
+.nav_holder:hover .profile_pic{
+    transform: rotate(360deg);
 }
 
 .profile_name{
@@ -79,6 +87,7 @@ td{
 
 /*NAVIGATION BAR END*/
 
+/*BASIC BODY CONTENT*/
 .content {
     position: absolute;
     background: inherit;
@@ -119,3 +128,4 @@ td{
     margin-right: 5%
 
 }
+/*BASIC BODY CONTENT END*/
