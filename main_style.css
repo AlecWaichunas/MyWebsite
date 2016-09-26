@@ -9,11 +9,19 @@ body {
     background-color: white;
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 /*NAVIGATION BAR START AKA ALGORITHM ;) */
 
 table{
     border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+}
+
+td{
+    margin: 0;
+    padding: 0;
 }
 
 .nav_holder{
@@ -38,6 +46,17 @@ table{
     line-height: 50px;
     text-decoration: none;
     color: black;
+}
+
+.tab {
+    border-right: 0px solid black;
+    border-radius: 2px;
+    -webkit-transition: border 50ms;
+    transition: border-right 50ms linear;
+}
+
+.tab:hover {
+    border-right-width: 3px;
 }
 
 .nav_bar_option_image{

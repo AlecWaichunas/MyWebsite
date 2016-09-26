@@ -19,7 +19,8 @@ for(var i = 0; i < tabs.length; i++){
     (function(tab, link, startPos){
         tab.on("click", function(){
             var minWidth = $("#content").css("min-width")
-            $("#content").css({ "min-width": $("#content").width()})
+            $("#content").css({"min-width": $("#content").width()})
+            $("body").css({"overflow-x": "hidden"})
             $("#content").animate({
                 left: $(document).width(),
             }, 500, function(){
@@ -28,7 +29,8 @@ for(var i = 0; i < tabs.length; i++){
                 $("#content").animate({
                     left: startPos
                 }, 500, function(){
-                    $("#content").css({ "min-width": minWidth})
+                    $("#content").css({"min-width": minWidth})
+                    $("body").css({"overflow-x": "auto"})
                 });
             });
         });
