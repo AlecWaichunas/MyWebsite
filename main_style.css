@@ -136,7 +136,7 @@ td{
     text-shadow: 10px -10px #34baff;
 }
 
-.content_body{
+.content_body p{
     margin: 25px;
     padding: 25px;
     background-color: #e6f7ff;
@@ -145,11 +145,5 @@ td{
 
 .contact_info {
     margin: auto;
-}
-
-.content_body p{
-    margin-left: 5%;
-    margin-right: 5%
-
 }
 /*BASIC BODY CONTENT END*/
