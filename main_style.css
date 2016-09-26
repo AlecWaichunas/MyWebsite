@@ -6,7 +6,7 @@
 */
 
 body {
-    background-color: white;
+    background-color: #ccebff;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -28,8 +28,8 @@ td{
 .nav_holder{
     height: 100%;
     width: 250px;
-    background-color: rgb(200, 200, 200);
-    border-right: 2px solid rgb(160, 160, 160);
+    background-color: #80d4ff;
+    border-right: 1px solid white;
 }
 
 .nav_bar{
@@ -46,13 +46,15 @@ td{
     display: block;
     line-height: 50px;
     text-decoration: none;
-    color: black;
+    color: #002080;
 }
 
 .tab {
+    margin-top: 10%;
     transition-property: transform, text-shadow, letter-spacing, box-shadow;
     transition-duration: 200ms;
     transition-timing-function: ease-out;
+    color: inherit;
 }
 
 .tab:hover {
@@ -83,6 +85,7 @@ td{
 
 .profile_name{
     text-align: center;
+    color: inherit;
 }
 
 /*NAVIGATION BAR END*/
@@ -101,8 +104,8 @@ td{
 .content_header{
     margin: 25px;
     padding: 25px;
-    border-radius: 25px;
-    background-color: grey;
+    background-color: #e6f7ff;
+    border: 3px solid #80d4ff;
 }
 
 .content_header p{
@@ -115,8 +118,8 @@ td{
 .content_body{
     margin: 25px;
     padding: 25px;
-    border-radius: 25px;
-    background-color: grey;
+    background-color: #e6f7ff;
+    border: 3px solid #80d4ff;
 }
 
 .contact_info {
