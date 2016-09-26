@@ -6,7 +6,7 @@
 */
 
 body {
-    background-color: #ccebff;
+    background-color: #ffffff;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -28,29 +28,34 @@ td{
 .nav_holder{
     height: 100%;
     width: 250px;
-    background-color: #80d4ff;
+    background-color: rgb(230, 230, 230);
     border-right: 1px solid white;
 }
 
 .nav_bar{
     width: 250px;
     min-height: 600px;
+    height: 100%;
     background-color: inherit;
 }
 
 .nav_table{
     width: 100%;
+    max-height: 600px;
 }
 
 .nav_table a{
     display: block;
     line-height: 50px;
     text-decoration: none;
-    color: #002080;
+    color: #00669b;
 }
 
 .tab {
-    margin-top: 10%;
+    margin-bottom: 1%;
+    background-color: #c2d8e4;
+    border-bottom: 1px solid #34baff;
+    letter-spacing: 3px;
     transition-property: transform, text-shadow, letter-spacing, box-shadow;
     transition-duration: 200ms;
     transition-timing-function: ease-out;
@@ -58,10 +63,11 @@ td{
 }
 
 .tab:hover {
-    box-shadow: 1px 2px rgb(120, 120, 120);
+    border-bottom-width: 0px;
+    box-shadow: 1px 2px #34baff;
     transform: rotate(5deg);
-    letter-spacing: 3px;
-    text-shadow: 20px -10px rgb(120, 120, 120);
+    letter-spacing: 6px;
+    text-shadow: 20px -10px #34baff;
 }
 
 .nav_bar_option_image{
@@ -71,11 +77,14 @@ td{
     margin-right: 10px;
 }
 
+.main_pic{
+    height: 200px;
+}
+
 .profile_pic{
     width: 200px;
     height: 200px;
-    padding-left: 25px;
-    padding-top: 25px;
+    margin-left: 25px;
     transition: transform 1000ms ease-in;
 }
 
@@ -84,6 +93,12 @@ td{
 }
 
 .profile_name{
+    font-size: 20px;
+    padding-top: 10px;
+    margin-bottom: 25px;
+    position: relative;
+    letter-spacing: 5px;
+    display: block;
     text-align: center;
     color: inherit;
 }
@@ -102,17 +117,23 @@ td{
 }
 
 .content_header{
-    margin: 25px;
-    padding: 25px;
+    padding-top: 25px;
     background-color: #e6f7ff;
-    border: 3px solid #80d4ff;
+    border-bottom: 3px solid #80d4ff;
 }
 
 .content_header p{
     margin: 0;
     font-size: 300%;
     text-align: center;
-    color: blue;
+    color: #00669b;
+    transition-property: all;
+    transition-duration: 1000ms;
+    transition-timing-function: linear;
+}
+
+.content_header p:hover{
+    text-shadow: 10px -10px #34baff;
 }
 
 .content_body{
