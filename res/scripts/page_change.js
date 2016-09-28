@@ -18,25 +18,23 @@ for(var i = 0; i < tabs.length; i++){
     //function for variable scope within click event
     (function(tab, link, startPos){
         tab.on("click", function(){
-            var headerChildren = $("#content_header").children();
-            var bodyChildren = $("#content_body").children();
+            var header = $("#content_header");
+            var body = $("#content_body");
 
             var minWidth = $("#content").css("min-width");
             $("#content").css({"min-width": $("#content").width()});
             $("body").css({"overflow-x": "hidden"});
 
-            $("#content_header").animate({
-                "margin-left": $(document).width()
-            }, 500);
 
-            var moveChildren = function(leftAmount, children, time){
-                for(var c = 0; c < children.length; c++){
-                    children[i].css({"position": "relative"});
-                    children[i].animate({
-                        "padding-left": leftAmount
+            var moveChildren = function(leftAmount, parent, time){
+                parent.children().each(function(){
+                    this.animate({
+                        fontSize: 0
                     }, time);
-                }
+                });
             };
+
+            moveChildren($(document).width(), header, 500);
 
             /*moveChildren($(document).width(), headerChildren, 500);
             moveChildren($(document).width(), bodyChildren, 500);
